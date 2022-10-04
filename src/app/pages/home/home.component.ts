@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
     const result: any = await this.userSer.getUsers();
     this.users = result[1];
     this.dataSource.data = this.users;
-    console.log(result);
   }
 
   async editUser(user: User) {
@@ -47,7 +46,6 @@ export class HomeComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
       this.getData();
     });
   }
@@ -74,9 +72,7 @@ export class DialogUser {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private createrForm: FormBuilder,
     private userSer: UserService
-  ) {
-    console.log(data);
-  }
+  ) {}
   public editForm = this.createrForm.group({
     name: [this.data.user.name, [Validators.required]],
     surname: [this.data.user.surname, [Validators.required]],

@@ -40,11 +40,10 @@ export class UserService {
         .put(
           `http://51.38.51.187:5050/api/v1/users/${id}`,
           form.value,
-          requestOptions          
+          requestOptions
         )
         .subscribe({
-          next: (resp: any) => {
-            console.log(resp);
+          next: () => {
             resolve(true);
           },
           error: () => {

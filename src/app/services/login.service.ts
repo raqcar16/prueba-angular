@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
-  email = 'usuario@gmail.com';
-  password = '1234';
   constructor(private http: HttpClient) {}
 
   signIn(form: FormGroup) {
@@ -21,8 +19,7 @@ export class LoginService {
             localStorage.setItem('tokenType', resp.tokenType);
             resolve(true);
           },
-          error: (resp) => {
-            console.log(resp);
+          error: () => {
             resolve(false);
           },
           complete: () => {},

@@ -9,14 +9,14 @@ import { LoginService } from '../../services/login.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  public loginForm = this.creadorForm.group({
+  public loginForm = this.creatorForm.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
   });
 
   constructor(
     private router: Router,
-    private creadorForm: FormBuilder,
+    private creatorForm: FormBuilder,
     private logSer: LoginService
   ) {}
 
@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
     } else {
       window.alert('User email not found or password invalid');
     }
-    console.log(result);
   }
 
   goToRegister() {

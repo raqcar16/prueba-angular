@@ -30,11 +30,9 @@ export class RegisterService {
         .post(`http://51.38.51.187:5050/api/v1/auth/sign-up`, form.value)
         .subscribe({
           next: () => {
-            console.log(resolve);
             resolve(true);
           },
           error: () => {
-            console.log(resolve);
             resolve(false);
           },
           complete: () => {},
