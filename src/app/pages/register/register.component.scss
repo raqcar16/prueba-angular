@@ -1,0 +1,45 @@
+
+.registerContent
+{
+    background-image: url("https://www.hiberus.com/sites/default/files/inline-images/edificio1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.registerdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.register-card {
+    background-color: rgb(137, 158, 250);
+    max-width: 400px;
+    display: flexbox;
+
+}
+
+mat-form-field {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.register-button {
+    background-color: rgba(97, 97, 175, 0.623);
+    display: block;
+    width: 70%;
+    margin: 20px auto
+}
+
+.titleReg{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: large;
+}
+
+.register-access {
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.edit-card {
+    background-color: rgb(137, 158, 250);
+    max-width: 400px;
+    display: flexbox;
+
+}
+
+mat-form-field {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.edit-button {
+    background-color: rgba(97, 97, 175, 0.623);
+    display: block;
+    width: 70%;
+    margin: 20px auto
+}
+
+.titleEdit {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: large;
+}
